@@ -18,7 +18,7 @@ def img_callback(img):
 
 def main(args):
     rospy.init_node('image_display_from_rob', anonymous=True)
-    image_sub = rospy.Subscriber("tennis_ball_image",Image, img_callback)
+    image_sub = rospy.Subscriber("detection",Image, img_callback)
     try:
        rospy.spin()
     except KeyboardInterrupt:
